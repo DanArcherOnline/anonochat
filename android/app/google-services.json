@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251195771217",
+    "firebase_url": "https://anonochat.firebaseio.com",
+    "project_id": "anonochat",
+    "storage_bucket": "anonochat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251195771217:android:38cb2001fc16f86e4feb70",
+        "android_client_info": {
+          "package_name": "com.example.ananochat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251195771217-qasjd0rkghg0a4dhsaoce68ruh663f33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLVKHTovHr-7y_Vf4OPj_SxvFyxAALVxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251195771217-qasjd0rkghg0a4dhsaoce68ruh663f33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
