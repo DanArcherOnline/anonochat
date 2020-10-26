@@ -9,12 +9,7 @@ import 'package:provider/provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp();
-  runApp(
-    ChangeNotifierProvider(
-      create: (BuildContext context) => ChatService(),
-      child: AnonochatApp(),
-    ),
-  );
+  runApp(AnonochatApp());
 }
 
 class AnonochatApp extends StatelessWidget {
@@ -26,8 +21,15 @@ class AnonochatApp extends StatelessWidget {
       initialRoute: DisplayNamePage.id,
       routes: {
         DisplayNamePage.id: (context) => DisplayNamePage(),
-        ChatPage.id: (context) => ChatPage(),
+        ChatPage.id: (context) => buildChatPage(),
       },
+    );
+  }
+
+  Widget buildChatPage() {
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => ChatService(),
+      child: ChatPage(),
     );
   }
 }

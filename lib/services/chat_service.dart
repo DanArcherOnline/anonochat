@@ -22,7 +22,7 @@ class ChatService with ChangeNotifier {
     if (message.content.isNotEmpty) {
       try {
         await _collection.doc().set(message.toSnapshot());
-        notifyListeners();
+        // notifyListeners();
       } on FirebaseException catch (e) {
         print('Error with setting data in FireStore: ${e.code}');
         print('↑\n${e.message}');
@@ -30,8 +30,9 @@ class ChatService with ChangeNotifier {
     }
   }
 
-  Stream<List<Message>> get messages =>
-      _snapshots.map((snapshot) => snapshot.docs.reversed
-          .map((document) => Message.fromFirestore(document))
-          .toList());
+  Stream<List<Message>> messages() async* {
+    yield* _snapshots.map((snapshot) => snapshot.docs.reversed
+        .map((document) => Message.fromFirestore(document))
+        .toList());
+  }
 }

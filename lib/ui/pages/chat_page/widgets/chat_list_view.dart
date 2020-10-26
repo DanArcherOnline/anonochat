@@ -19,7 +19,7 @@ class ChatListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Flexible(
       child: StreamBuilder<List<Message>>(
-        stream: Provider.of<ChatService>(context).messages,
+        stream: Provider.of<ChatService>(context).messages(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView.separated(
