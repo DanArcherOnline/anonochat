@@ -2,6 +2,9 @@
 
 A single anonomous chat room demo app made with flutter
 
+
+<img src="https://github.com/DanArcherOnline/anonochat/blob/master/anonochat_screenshot.png" height="500" />
+
 ## How does it work?
 
 Choose a display name to enter the chat room with.
