@@ -22,7 +22,6 @@ class ChatService with ChangeNotifier {
     if (message.content.isNotEmpty) {
       try {
         await _collection.doc().set(message.toSnapshot());
-        // notifyListeners();
       } on FirebaseException catch (e) {
         print('Error with setting data in FireStore: ${e.code}');
         print('↑\n${e.message}');
