@@ -1,6 +1,8 @@
 # Anonochat
 
 A single anonomous chat room demo app made with flutter
+<br>
+(Currently only working on Android devices)
 
 
 <img src="https://github.com/DanArcherOnline/anonochat/blob/master/anonochat_screenshot.png" height="500" />
